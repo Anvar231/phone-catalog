@@ -1,23 +1,16 @@
 "use client"
 
-import {getProductById} from "../model/getProductById";
-import {notFound} from "next/navigation";
-import {Flex, Carousel, Row, Col, Space, Button, Descriptions, Rate, Tag, Typography} from "antd";
+import {Carousel, Row, Col, Space, Button, Descriptions, Rate, Tag, Typography} from "antd";
 import Image from "next/image";
+import type {IProduct} from "../../../entities/product";
 
 const { Title, Paragraph, Text } = Typography;
 
 interface ProductType {
-    id: string;
+    product: IProduct;
 }
 
-export function Product({id}: ProductType) {
-    const product = getProductById(Number(id));
-
-    if (!product) {
-        notFound();
-    }
-
+export function Product({product}: ProductType) {
     return (
         <Row>
             <Col span={6}>
@@ -25,8 +18,9 @@ export function Product({id}: ProductType) {
                     {
                         product?.images.map((img) => (
                             <Image
+                            key={img}
                             src={img}
-                            alt={img}
+                            alt={product.title}
                             width={500}
                             height={500}
                             />

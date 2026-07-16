@@ -1,5 +1,3 @@
-import phones from "./model/smartphones.json";
-import type {ProductsResponse, Product} from "./model/types";
+import type {IProductsResponse, IProduct} from "./model/types";
 
-export const typedPhones: ProductsResponse = phones;
-export type {Product};
+export type {IProduct, IProductsResponse};

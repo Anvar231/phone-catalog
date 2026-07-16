@@ -1,4 +1,4 @@
-interface Review {
+interface IReview {
     rating: number;
     comment: string;
     date: string;
@@ -6,20 +6,23 @@ interface Review {
     reviewerEmail: string;
 }
 
-interface Dimensions {
+interface IDimensions {
     width: number;
     height: number;
     depth: number;
 }
 
-interface Meta {
+interface IMeta {
     createdAt: string;
     updatedAt: string;
     barcode: string;
     qrCode: string;
 }
 
-export interface Product {
+type Tags = "smartphones" | "apple" | "oppo" | "realme" | "samsung galaxy" | "vivo";
+type ImageURL = string;
+
+export interface IProduct {
     id: number;
     title: string;
     description: string;
@@ -28,24 +31,24 @@ export interface Product {
     discountPercentage: number;
     rating: number;
     stock: number;
-    tags: string[];
+    tags: Tags[];
     brand: string;
     sku: string;
     weight: number;
-    dimensions: Dimensions;
+    dimensions: IDimensions;
     warrantyInformation: string;
     shippingInformation: string;
     availabilityStatus: string;
-    reviews: Review[];
+    reviews: IReview[];
     returnPolicy: string;
     minimumOrderQuantity: number;
-    meta: Meta;
-    images: string[];
+    meta: IMeta;
+    images: ImageURL[];
     thumbnail: string;
 }
 
-export interface ProductsResponse {
-    products: Product[];
+export interface IProductsResponse {
+    products: IProduct[];
     total: number;
     skip: number;
     limit: number;

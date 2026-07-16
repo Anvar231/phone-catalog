@@ -5,15 +5,20 @@ import ProductCard from "@/widgets/catalog/ui/ProductCard";
 import ProductSearch from "@/widgets/catalog/ui/ProductSearch";
 import {type ChangeEvent, useState} from "react";
 import {sortProducts} from "@/widgets/catalog/model/sortProducts";
+import {IProductsResponse} from "../../../entities/product/model/types";
 
 const SPAN = 6;
 const PAGE_SIZE = 8;
 
-export function Catalog() {
+interface ICatalog {
+    phones: IProductsResponse;
+}
+
+export function Catalog({phones}: ICatalog) {
     const [searchValue, setSearchValue] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
 
-    const {pageFiltered, length} = sortProducts(searchValue, currentPage, PAGE_SIZE);
+    const {pageFiltered, length} = sortProducts(phones.products, searchValue, currentPage, PAGE_SIZE);
 
     function handleChange(e: ChangeEvent<HTMLInputElement>) {
         setSearchValue(e.target.value);

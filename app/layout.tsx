@@ -2,7 +2,6 @@ import type {ReactNode} from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/widgets/header";
-import ProductSearch from "@/widgets/catalog/ui/ProductSearch";
 
 export const metadata: Metadata = {
   title: "Phones",

@@ -1,9 +1,12 @@
 import {Catalog} from "@/widgets/catalog";
+import {getProducts} from "../../shared/api/api";
 
-export default function Page() {
+export default async function Page() {
+    const phones = await getProducts();
+
     return (
         <>
-            <Catalog />
+            <Catalog phones={phones}/>
         </>
     );
 }

@@ -1,5 +1,5 @@
 import {Product} from "@/widgets/product";
-import {Carousel, Flex} from "antd";
+import {getProductById} from "../../../shared/api/api";
 
 interface PageType {
     params: Promise<{id: string}>;
@@ -7,8 +7,9 @@ interface PageType {
 
 export default async function Page({params}: PageType) {
     const {id} = await params;
+    const product = await getProductById(Number(id));
 
     return (
-        <Product id={id} />
+        <Product product={product} />
     );
 }

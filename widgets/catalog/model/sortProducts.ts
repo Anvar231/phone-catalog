@@ -1,14 +1,12 @@
-import { typedPhones } from "../../../entities/product";
-import type {Product} from "@/entities/product/";
+import type {IProduct} from "@/entities/product/";
 
-const products = typedPhones.products;
 
 interface sortProductsReturnType {
-    pageFiltered: Product[];
+    pageFiltered: IProduct[];
     length: number;
 }
 
-export function sortProducts(string: string, currentPage: number, pageSize: number): sortProductsReturnType {
+export function sortProducts(products: IProduct[], string: string, currentPage: number, pageSize: number): sortProductsReturnType {
     const searchString = string.toLowerCase();
     const nameFiltered = products.filter(product => product.title.toLowerCase().includes(searchString));
 
