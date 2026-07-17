@@ -13,7 +13,8 @@
         color: white;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: black;
         border: 1px solid white;
     }

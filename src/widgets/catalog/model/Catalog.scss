@@ -1,0 +1,38 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.catalog_pagination {
+    display: flex;
+    justify-content: center;
+
+    margin: 20px 0;
+
+    .ant-pagination-item {
+        background-color: black;
+        border-color: white;
+
+        a {
+            color: white;
+        }
+
+        &:hover {
+            background-color: white !important;
+
+            a {
+                color: black;
+            }
+        }
+    }
+
+    .ant-pagination-item-active {
+        background-color: white;
+        border-color: white;
+
+        a {
+            color: black;
+        }
+    }
+}

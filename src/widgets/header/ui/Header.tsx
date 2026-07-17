@@ -9,9 +9,7 @@ export const Header = () => {
     const path = usePathname();
 
     return (
-        <header
-            className="header"
-        >
+        <header className="header">
             <Menu
                 className="header-menu"
                 mode="horizontal"

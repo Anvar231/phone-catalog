@@ -1,6 +1,6 @@
 import { Input } from 'antd';
 import type { ChangeEvent } from 'react';
-import "../model/ProductSearch.scss";
+import '../model/ProductSearch.scss';
 
 interface ProductPageType {
     searchValue: string;

@@ -1,6 +1,6 @@
 'use client';
 
-import TextBox from "@/src/widgets/textBox/ui/TextBox";
+import TextBox from '@/src/widgets/textBox/ui/TextBox';
 
 interface ICatalogError {
     error: Error & { digest?: string };

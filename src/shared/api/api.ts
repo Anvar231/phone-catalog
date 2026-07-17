@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import type { IProductsResponse } from '@/src/entities/product/model/types';
 
 const API_URL = 'https://dummyjson.com';
@@ -8,11 +8,22 @@ const clientApi = axios.create({
 });
 
 export async function getProducts() {
-    const response = await clientApi.get<IProductsResponse>(
-        '/products/category/smartphones'
-    );
+    try {
+        const { data } =
+            await clientApi.get<IProductsResponse>(
+                '/products/category/smartphones'
+            );
 
-    return response.data;
+        return data;
+    } catch (error) {
+        if (error instanceof AxiosError) {
+            throw new Error(
+                `Не удалось загрузить данные: ${error.status}`
+            );
+        }
+
+        throw error;
+    }
 }
 
 export async function getProductById(id: number) {

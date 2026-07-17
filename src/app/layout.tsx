@@ -16,9 +16,7 @@ const RootLayout = ({ children }: RootLayoutType) => (
     <html lang="en">
         <body>
             <Header />
-            <div>
-                {children}
-            </div>
+            <div>{children}</div>
         </body>
     </html>
 );
