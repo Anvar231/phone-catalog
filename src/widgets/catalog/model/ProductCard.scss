@@ -1,0 +1,22 @@
+.product-card {
+    background-color: black;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: white;
+    }
+
+    & * {
+        color: white;
+    }
+
+    &:hover * {
+        color: black;
+    }
+
+    & .product-card_wrapper {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 800;
+    }
+}

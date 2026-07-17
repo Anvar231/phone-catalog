@@ -1,0 +1,133 @@
+.product-page {
+    color: white;
+}
+
+.product-page_gallery,
+.product-page_info {
+    border: 1px solid white;
+    background-color: black;
+}
+
+.product-page_gallery {
+    overflow: hidden;
+}
+
+.product-page_carousel {
+    padding-bottom: 28px;
+
+    & .slick-prev,
+    & .slick-next {
+        color: white;
+    }
+
+    & .slick-dots li button {
+        background: white;
+    }
+
+    & .slick-dots li.slick-active button,
+    & .slick-dots li.slick-active::after {
+        background: white;
+    }
+}
+
+.product-page_slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+    padding: 28px;
+}
+
+.product-page_image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 460px;
+    object-fit: contain;
+}
+
+.product-page_info {
+    min-height: 100%;
+    padding: 32px;
+}
+
+.product-page_content {
+    width: 100%;
+}
+
+.product-page_title,
+.product-page_price,
+.product-page_description,
+.product-page_rating {
+    color: white !important;
+}
+
+.product-page_title,
+.product-page_price {
+    margin: 0 !important;
+}
+
+.product-page_tag {
+    border-color: white;
+    background: black;
+    color: white;
+}
+
+.product-page_price-rating {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.product-page_rate {
+    color: white;
+}
+
+.product-page_description {
+    max-width: 760px;
+    font-size: 18px;
+}
+
+.product-page_descriptions {
+    & .ant-descriptions-view {
+        border-color: white !important;
+    }
+
+    & .ant-descriptions-item-label,
+    & .ant-descriptions-item-content {
+        border-color: white !important;
+        background: black !important;
+        color: white !important;
+    }
+}
+
+.product-page_button {
+    width: fit-content;
+    border-color: white;
+    background-color: white;
+    color: black;
+
+    &:hover {
+        border-color: white !important;
+        background-color: black !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-page_slide {
+        min-height: 360px;
+        padding: 18px;
+    }
+
+    .product-page_info {
+        padding: 24px;
+    }
+
+    .product-page_price-rating {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
