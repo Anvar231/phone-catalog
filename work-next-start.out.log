@@ -1,0 +1,8 @@
+
+> phone-site@0.1.0 start
+> next start --port 3011
+
+▲ Next.js 16.2.10
+- Local:         http://localhost:3011
+- Network:       http://172.18.0.1:3011
+✓ Ready in 446ms

@@ -1,0 +1,15 @@
+.text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 50px;
+
+    min-height: 200px;
+
+    border: 2px solid white;
+    border-radius: 10px;
+
+    font-size: 56px;
+    color: white;
+}

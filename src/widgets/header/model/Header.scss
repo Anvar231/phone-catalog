@@ -1,0 +1,46 @@
+.header-menu {
+    background-color: black;
+    border-bottom: 1px solid white;
+    min-height: 70px;
+    margin-bottom: 30px;
+
+    & .ant-menu-item {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: white !important;
+
+            a {
+                color: black !important;
+            }
+        }
+
+        &::after {
+            border-bottom: none !important;
+        }
+    }
+
+    & .ant-menu-item-selected {
+        background-color: white !important;
+        transition: border-bottom 0s;
+
+        a {
+            color: black !important;
+            transition: color 0s;
+        }
+
+        &:hover {
+            background-color: black !important;
+            border-bottom: 1px solid white;
+
+            a {
+                color: white !important;
+            }
+        }
+    }
+
+    & * {
+        color: white;
+    }
+}

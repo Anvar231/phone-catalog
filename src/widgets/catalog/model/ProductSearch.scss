@@ -1,0 +1,21 @@
+.catalog-wrapper {
+    padding: 0 16px;
+}
+
+.search-input {
+    margin-bottom: 30px;
+    height: 40px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+
+    &::placeholder {
+        color: white;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: black;
+        border: 1px solid white;
+    }
+}
